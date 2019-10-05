@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+                name="viewmodel"
+                type="com.example.databinding.CountLiveDataViewModel" />
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+        <Button
+                android:id="@+id/countUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/count_up"
+                android:onClick="@{() -> viewmodel.onCountUp()}"/>
+        <Button
+                android:id="@+id/countDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/count_down"
+                android:onClick="@{() -> viewmodel.onCountDown()}"/>
+        <Button
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reset"
+                android:onClick="@{() -> viewmodel.onCountReset()}"/>
+    </LinearLayout>
+</layout>
